@@ -1,0 +1,152 @@
+body, p, h1, h2, h3, h4, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-height: 100vh;
+  font-family: sans-serif;
+}
+
+.nav-container > nav > ul {
+  list-style-type: none;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.logo-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container > nav > ul {
+  list-style-type: none;
+}
+.nav-ul {
+  display: flex;
+  max-width: 700px;
+}
+.nav-ul > li {
+  display: flex;
+}
+.nav-link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  flex: 1;
+  transition: 200ms;
+}
+.nav-ul li a:hover {
+  color: #afafaf;
+}
+.logo {
+    padding: 1rem;
+    height: 3rem; 
+    width: 6.975rem;
+}
+@media screen and (max-width: 700px) {
+
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-button {
+    padding: 1rem;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .nav-ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 80vh;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #f4f4f4;
+  }
+}
+/* DESKTOP MENU */
+@media screen and (min-width: 701px) {
+
+  .menu-button {
+    display: none;
+  }
+
+  .nav-link {
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* This moves the logo so that it's not touching the left side */
+@media screen and (max-width: 1040px) {
+  .nav-logo {
+    margin-left: 1rem;
+  }
+}
+/* END DESKTOP MENU */
+.jumbotron {
+    height: 100%;
+    min-height: 75vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/creekimg/creek005.jpg");
+}
+.jumbotron-text {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+pic-text {
+    font-size: 2rem;
+    color: white;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #afafaf;
+    padding: 1rem 1rem;
+}
+.social {
+  padding: 1rem 1rem;
+}
+.footer-ul {
+  list-style: none;
+  display: flex;
+}
+.footer-link {
+  text-decoration: none;
+  color: black;
+  padding: 1rem 1rem;
+}
+.cr {
+  padding: 1rem 1rem;
+}
+h1 {
+  color: white;
+  font-size: 4rem;
+}  
