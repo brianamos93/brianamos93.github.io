@@ -1,0 +1,287 @@
+body, p, h1, h2, h3, h4, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-height: 100vh;
+  font-family: sans-serif;
+}
+nav {
+  font-style: normal;
+  line-height: 50px;
+}
+.nav-container > nav > ul {
+  list-style-type: none;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.logo-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container > nav > ul {
+  list-style-type: none;
+}
+.nav-ul {
+  display: flex;
+  max-width: 700px;
+}
+.nav-ul > li {
+  display: flex;
+}
+.nav-link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  flex: 1;
+  transition: 200ms;
+}
+.nav-ul li a:hover {
+  color: #afafaf;
+}
+.logo {
+    padding: 1rem;
+    height: 3rem; 
+    width: 6.975rem;
+}
+@media screen and (max-width: 700px) {
+
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-button {
+    padding: 1rem;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .nav-ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 80vh;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #f4f4f4;
+  }
+}
+/* DESKTOP MENU */
+@media screen and (min-width: 701px) {
+
+  .menu-button {
+    display: none;
+  }
+
+  .nav-link {
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* This moves the logo so that it's not touching the left side */
+@media screen and (max-width: 1040px) {
+  .nav-logo {
+    margin-left: 1rem;
+  }
+}
+/* END DESKTOP MENU */
+.jumbotron {
+    height: 100%;
+    min-height: 75vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/creekimg/creek005.jpg");
+}
+.jumbotron-text {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+pic-text {
+    font-size: 2rem;
+    color: white;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #afafaf;
+    padding: 1rem 1rem;
+}
+.social {
+  padding: 1rem 1rem;
+}
+.footer-ul {
+  list-style: none;
+  display: flex;
+}
+.footer-link {
+  text-decoration: none;
+  color: black;
+  padding: 1rem 1rem;
+}
+.cr {
+  padding: 1rem 1rem;
+}
+h1 {
+  color: white;
+  font-size: 5rem;
+}
+.recent_news {
+  padding: 1.5rem;
+  margin: auto;
+  width: 75%;
+  max-width: 700px;
+}
+#news-title {
+  text-align: center;
+}
+.news_blurp {
+  padding: 1.25rem;
+}
+.intro {
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+h2 {
+  font-size: 3rem;
+}
+.info {
+  min-width: 200px;
+  flex: 1;
+  padding: 1.5rem;
+}
+.info-img {
+  padding: 1.5rem 0rem;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+/* Beer Menu */
+.beerimg {
+  height: auto;
+  width: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  flex: 1;
+  padding: 15px 0 0 0;
+}
+.beer-menu-title {
+  text-align: center;
+}
+.beer-name {
+  text-align: left;
+  padding: 3px;
+}
+.beer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  padding: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.words {
+  display: flex;
+  flex: 2 200px;
+  flex-direction: column;
+  padding: 10px;
+}
+.top-beer {
+  flex-direction: column;
+}
+.beer-extra {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+}
+.beer-des {
+  font-size: small;
+}
+.half-price {
+  padding: 10px 3px 3px 3px;
+}
+.pint-price {
+  padding: 10px 3px 3px 3px;
+}
+.beer-origin {
+  padding: 0 6px 0 0;
+}
+.beer-style {
+  padding: 0 6px 0 0;
+}
+.abv {
+  padding: 0 6px 0 0;
+}
+@media screen and (max-width: 800px) {
+  
+  .collapsible {
+    display: flex;
+  }
+  .beer-des {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+}
+@media screen and (min-width: 801px) {
+
+  .collapsible {
+    display: none;
+  }
+}
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
