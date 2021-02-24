@@ -1,5 +1,5 @@
 body, p, h1, h2, h3, h4, ul, li {
-  margin: 1;
+  margin: 0;
   padding: 0;
 }
 p {
@@ -176,7 +176,7 @@ footer {
   flex-wrap: wrap;
   flex-direction: row;
 }
-h2 {
+.subtitle {
   font-size: 3rem;
 }
 .info {
@@ -192,7 +192,10 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
-  
+  .label, .input, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
   .collapsible {
     display: flex;
   }
@@ -237,6 +240,7 @@ h2 {
 .beer-menu-title {
   margin: auto;
   text-align: center;
+  padding: 20px;
 }
 /*Beer card*/
 .card-container {
@@ -255,7 +259,7 @@ h2 {
   max-width: 250px;
   max-height: 250px;
   height: auto;
-  border-radius: 15%;
+  border-radius: 10%;
   height: 1000px;
   width: 1000px;
   padding: 10px;
@@ -263,10 +267,40 @@ h2 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .card-wrapper {
-  margin: auto;
   text-align: center;
   padding: 15px;
-  flex: 1 1 calc(33.33% - 30px);
+  border-radius: 5%;
+  max-width: 270px;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+#beer-size {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  width: 250px;
+  padding: 20px;
+}
+.beer-icon-wrapper {
+  margin: auto;
+  text-align: center;
+}
+.glass-icon-wrapper {
+  margin: auto;
+}
+.label-beer {
+  margin: auto;
+  text-align: center;
+}
+.glass-icon {
+  width: 100%;
+  height: auto;
+  max-height: 100px;
+  max-width: 50px;
+  margin: auto;
 }
 #card_1 {
   background-image: url(/creekimg/antihero.jpg);
@@ -287,4 +321,68 @@ h2 {
 }
 .text2 {
   padding-top: 10px;
+}
+.large-card {
+  margin: auto;
+  text-align: center;
+  padding: 15px;
+  flex: 1 1 calc(33.33% - 30px);
+}
+.beer-text {
+  padding-top: 10px;
+}
+
+/* CONTACT PAGE */
+.title {
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+}
+#contact-info, #contact-form {
+  margin: 30px;
+}
+#submit {
+  margin: auto;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+.label {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.input {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
