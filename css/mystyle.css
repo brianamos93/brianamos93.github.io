@@ -175,22 +175,42 @@ footer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
 }
 .subtitle {
   font-size: 3rem;
+  padding-bottom: 20px;
 }
 .info {
   min-width: 200px;
   flex: 1;
   padding: 15px;
+
 }
 .info-img {
-  padding: 10px 0rem;
   margin: auto;
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
-
+.intro-text {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.intro-button {
+  background-color: #0f6eb8;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
 @media screen and (max-width: 800px) {
   .label, .input, input[type=submit] {
     width: 100%;
@@ -241,6 +261,7 @@ footer {
   margin: auto;
   text-align: center;
   padding: 20px;
+  font-size: 46px;
 }
 /*Beer card*/
 .card-container {
@@ -284,6 +305,11 @@ footer {
   width: 250px;
   padding: 20px;
 }
+.beer-icon-wrapper-half {
+  margin: auto;
+  text-align: center;
+  padding-top: 25px;
+}
 .beer-icon-wrapper {
   margin: auto;
   text-align: center;
@@ -294,6 +320,13 @@ footer {
 .label-beer {
   margin: auto;
   text-align: center;
+}
+.glass-icon-half {
+  width: 100%;
+  height: auto;
+  max-height: 75px;
+  max-width: 37.5px;
+  margin: auto;
 }
 .glass-icon {
   width: 100%;
@@ -321,17 +354,20 @@ footer {
 }
 .text2 {
   padding-top: 10px;
+  line-height: 140%;
 }
 .large-card {
   margin: auto;
   text-align: center;
-  padding: 15px;
-  flex: 1 1 calc(33.33% - 30px);
+  padding: 30px;
+  flex: 1 1 calc(33.33% - 60px);
 }
 .beer-text {
   padding-top: 10px;
 }
-
+.beer-price {
+  line-height: 200%;
+}
 /* CONTACT PAGE */
 .title {
   text-align: center;
