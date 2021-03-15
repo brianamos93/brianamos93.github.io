@@ -422,3 +422,36 @@ input[type=submit] {
   display: table;
   clear: both;
 }
+
+/* info display*/
+.full-view-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.left {
+  flex: 1;
+  margin: 10px;
+}
+.right {
+  flex: 1;
+  margin: 10px;
+}
+#first {
+  background: red;
+}
+#second {
+  background: blue;
+}
+.info-img {
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 700px) {
+  .full-view-container {
+      flex-direction: column;
+  }
+}
