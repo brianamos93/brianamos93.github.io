@@ -434,11 +434,14 @@ input[type=submit] {
 }
 .left {
   flex: 1;
-  margin: 10px;
+  margin: 20px;
 }
 .right {
   flex: 1;
-  margin: 10px;
+  margin: 20px;
+}
+.intro-text-wrapper {
+  max-width: 600px;
 }
 #first {
   background: red;
