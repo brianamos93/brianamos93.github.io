@@ -43,9 +43,14 @@ nav {
   color: black;
   flex: 1;
   transition: 200ms;
+  border-bottom: 5px solid white;
 }
 .nav-ul li a:hover {
   color: #afafaf;
+  border-bottom: 5px solid grey;
+}
+.active-desktop {
+  border-bottom: 5px solid grey;
 }
 .logo {
     padding: 1rem;
@@ -118,7 +123,10 @@ nav {
     align-items: center;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("/creekimg/creek005.jpg");
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url("/creekimg/creek005.jpg");
 }
 .jumbotron-text {
   color: white;
@@ -133,9 +141,20 @@ nav {
   color: white;
   font-size: 5rem;
 }
+.jumbotron-button {
+  margin-top: 20px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  background-color: gray;
+  color: white;
+  padding: 20px;
+  border-radius: 30px;
+}
+/*footer*/
 footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #afafaf;
@@ -157,6 +176,7 @@ footer {
 .cr {
   padding: 1rem 1rem;
 }
+/*news*/
 .recent_news {
   padding: 1.5rem;
   margin: auto;
@@ -196,6 +216,14 @@ footer {
 .intro-text {
   padding-top: 20px;
   padding-bottom: 30px;
+  font-size: calc(0.5em + 0.6vw);
+  line-height: 1.5em;
+}
+@media (max-width: 700px) {
+  .intro-text {
+    font-size: 18px;
+    line-height: normal;
+  }
 }
 .intro-button {
   background-color: #0f6eb8;
@@ -371,6 +399,7 @@ footer {
 /* CONTACT PAGE */
 .title {
   text-align: center;
+  padding: 20px;
 }
 .wrapper {
   display: flex;
@@ -379,20 +408,29 @@ footer {
   flex-wrap: wrap;
   flex-direction: row;
   margin: auto;
+  height: 100%;
 }
 #contact-info, #contact-form {
   margin: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+#contact-info p {
+  text-align: center;
 }
 #submit {
   margin: auto;
 }
-input[type=text], select, textarea {
+input[type=text], input[type=email], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+}
+textarea {
+  min-height: 200px;
 }
 label {
   padding: 12px 12px 12px 0;
@@ -406,17 +444,9 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  width: 100%;
 }
-.label {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-.input {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
+
 .row:after {
   content: "";
   display: table;
@@ -425,12 +455,13 @@ input[type=submit] {
 
 /* info display*/
 .full-view-container {
-  height: 100vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 50px 20px;
 }
 .left {
   flex: 1;
@@ -441,20 +472,48 @@ input[type=submit] {
   margin: 20px;
 }
 .intro-text-wrapper {
-  max-width: 600px;
+  max-width: 800px;
 }
 #first {
-  background: red;
+  background: white;
 }
 #second {
-  background: blue;
+  background: #95b7db;
 }
 .info-img {
-  max-width: 100%;
+  
   height: auto;
+  display: block;
+  margin: auto;
+}
+.intro-beer-menu-link {
+  margin-top: 20px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  text-align: center;
+  background-color: #95b7db;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: calc(0.5em + 1vw);
+}
+.intro-beer-menu-link:hover {
+  background-color: lightslategray;
 }
 @media screen and (max-width: 700px) {
   .full-view-container {
+      height: auto;
       flex-direction: column;
   }
+  .intro-beer-menu-link {
+    font-size: 20px;
+  }
+  .info-img {
+    max-width: calc(100% - 5vh);
+  }
+}
+/*Access*/
+.directions {
+  width: 600px;
 }
