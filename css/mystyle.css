@@ -182,12 +182,19 @@ footer {
 }
 .footer-nav {
   list-style-type: none;
-  line-height: 40px;
 }
 .footer-nav-item {
+  padding: 5px 0;
 }
 .footer-link {
   text-decoration: none;
+}
+.social-media {
+  display: flex;
+  padding: 10px;
+}
+.facebook-logo {
+  padding-left: 10px;
 }
 /*news*/
 .recent_news {
@@ -444,10 +451,11 @@ footer {
   margin: auto;
   height: 100%;
 }
-#contact-info, #contact-form {
+#contact-info {
   margin: 30px;
   width: 100%;
   max-width: 800px;
+  flex: 2 2 0;
 }
 #contact-info p {
   text-align: center;
@@ -460,7 +468,6 @@ input[type=text], input[type=email], select, textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
   resize: vertical;
 }
 textarea {
@@ -479,6 +486,7 @@ input[type=submit] {
   cursor: pointer;
   float: right;
   width: 100%;
+  margin-top: 20px;
 }
 
 .row:after {
@@ -486,7 +494,14 @@ input[type=submit] {
   display: table;
   clear: both;
 }
-
+.contact-image {
+  flex: 2 2 0;
+}
+.contact-image img {
+  height: auto;
+  width: 100%;
+  border-radius: 15px;
+}
 /* info display*/
 .full-view-container {
   height: 100vh;
